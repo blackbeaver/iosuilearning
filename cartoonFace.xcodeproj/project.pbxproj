@@ -14,6 +14,7 @@
 		98AAEE0A1EFA41A800418487 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98AAEE081EFA41A800418487 /* LaunchScreen.storyboard */; };
 		98AAEE151EFA41A800418487 /* cartoonFaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAEE141EFA41A800418487 /* cartoonFaceTests.swift */; };
 		98AAEE201EFA41A800418487 /* cartoonFaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAEE1F1EFA41A800418487 /* cartoonFaceUITests.swift */; };
+		98AAEE2F1EFA422200418487 /* RoundFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAEE2E1EFA422200418487 /* RoundFace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		98AAEE1B1EFA41A800418487 /* cartoonFaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cartoonFaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98AAEE1F1EFA41A800418487 /* cartoonFaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartoonFaceUITests.swift; sourceTree = "<group>"; };
 		98AAEE211EFA41A800418487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98AAEE2E1EFA422200418487 /* RoundFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundFace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		98AAEDFE1EFA41A800418487 /* cartoonFace */ = {
 			isa = PBXGroup;
 			children = (
-				98AAEDFF1EFA41A800418487 /* AppDelegate.swift */,
+				98AAEE2D1EFA41C400418487 /* Supporing files */,
 				98AAEE011EFA41A800418487 /* ViewController.swift */,
+				98AAEE2E1EFA422200418487 /* RoundFace.swift */,
 				98AAEE031EFA41A800418487 /* Main.storyboard */,
-				98AAEE061EFA41A800418487 /* Assets.xcassets */,
-				98AAEE081EFA41A800418487 /* LaunchScreen.storyboard */,
-				98AAEE0B1EFA41A800418487 /* Info.plist */,
 			);
 			path = cartoonFace;
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				98AAEE211EFA41A800418487 /* Info.plist */,
 			);
 			path = cartoonFaceUITests;
+			sourceTree = "<group>";
+		};
+		98AAEE2D1EFA41C400418487 /* Supporing files */ = {
+			isa = PBXGroup;
+			children = (
+				98AAEDFF1EFA41A800418487 /* AppDelegate.swift */,
+				98AAEE061EFA41A800418487 /* Assets.xcassets */,
+				98AAEE081EFA41A800418487 /* LaunchScreen.storyboard */,
+				98AAEE0B1EFA41A800418487 /* Info.plist */,
+			);
+			name = "Supporing files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98AAEE021EFA41A800418487 /* ViewController.swift in Sources */,
+				98AAEE2F1EFA422200418487 /* RoundFace.swift in Sources */,
 				98AAEE001EFA41A800418487 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

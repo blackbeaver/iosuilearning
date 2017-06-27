@@ -30,10 +30,12 @@ class RoundFace: UIView {
     }
     
     struct ratioOfEyeToHead {
-        static let eyeXOffsetToHeadRadius: CGFloat = 3
-        static let eyeYOffsetToHeadRadius: CGFloat = 0.4
+        static let eyeXOffsetToHeadRadius: CGFloat = 0.4
+        static let eyeYOffsetToHeadRadius: CGFloat = 3
         static let eyeRadiousToHeadRadius: CGFloat = 0.2
         
+        static let mouth1ToHeadRadius: CGFloat = 3
+        static
     }
     
     private var centerOfHead: CGPoint {
@@ -54,8 +56,11 @@ class RoundFace: UIView {
     
     private func eyeBezierpath(eye: sideOfEye) -> UIBezierPath {
         func eyeCenter(side: sideOfEye) -> CGPoint {
-            let eyeY: CGFloat = centerOfHead.y - (faceRadius / ratioOfEyeToHead.eyeYOffsetToHeadRadius)
-            let eyeX: CGFloat = centerOfHead.x + ((eye == .left) ? -1 : 1) * (faceRadius / ratioOfEyeToHead.eyeXOffsetToHeadRadius)
+        }
+            let x = centerOfHead.y - faceRadius / ratioOfEyeToHead.eyeYOffsetToHeadRadius
+            let y = centerOfHead.x + ((eye == .left) ? -1 : 1) * faceRadius * ratioOfEyeToHead.eyeXOffsetToHeadRadius
+            
+            return CGPoint(x: x, y: y)
         }
     }
     

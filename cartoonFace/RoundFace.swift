@@ -23,6 +23,8 @@ class RoundFace: UIView {
     @IBInspectable
     var lineWidth: CGFloat = 5.0
     
+    @IBInspectable
+    var eyesOpen: Bool = true
     
     enum sideOfEye {
         case left
@@ -70,21 +72,23 @@ class RoundFace: UIView {
             
             return CGPoint(x: x, y: eyeY)
         }
-
         
-        let path = UIBezierPath(arcCenter: eyeCenter(side: eye),
-                                radius: eyeRadius,
-                                startAngle: 0,
-                                endAngle: CGFloat.pi * 2,
-                                clockwise: true)
+        let path:UIBezierPath
+        
+        if eyesOpen {
+            path = UIBezierPath(arcCenter: eyeCenter(side: eye),
+                                    radius: eyeRadius,
+                                    startAngle: 0,
+                                    endAngle: CGFloat.pi * 2,
+                                    clockwise: true)
+        }else {
+            path = UIBezierPath()
+            let eyeSPX = eyeCenter(side: eye).x - eyeRadius
+            let eyeEPX = eyeCenter(side: eye).x + eyeRadius
+            path.move(to: CGPoint(x: eyeSPX, y: eyeY))
+            path.addLine(to: CGPoint(x: eyeEPX, y: eyeY))
+        }
         path.lineWidth = lineWidth
-/*
-        let path = UIBezierPath()
-        let eyeSPX = eyeCenter(side: eye).x - eyeRadius
-        let eyeEPX = eyeCenter(side: eye).x + eyeRadius
-        path.move(to: CGPoint(x: eyeSPX, y: eyeY))
-        path.addLine(to: CGPoint(x: eyeEPX, y: eyeY))
- */
         
         return path
     }

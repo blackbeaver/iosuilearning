@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var faceView: RoundFace!
+    private var expression = FacialExpression(eyes: .closed, mouth: .smile) {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    
+    
     private func updateUI(){
         switch expression.eyes {
         case .open:
@@ -17,12 +26,17 @@ class ViewController: UIViewController {
         case .closed:
             faceView?.eyesOpen = false
         case .squiting:
-            faceView?.eyesopen = false
+            faceView?.eyesOpen = false
         }
-        faceView?.emothionFactor = emotionFactors[expression.mouth] ?? 0.0
+        faceView?.emotionFactor = emotionFactors[expression.mouth] ?? 0.0
     }
     
-    private let emotionFactors = [
+    private let emotionFactors = [FacialExpression.Mouth.grin: 0.5,
+                                  .frown: -1.0,
+                                  .smile: 1.0,
+                                  .neutral: 0.0,
+                                  .smirk: -0.5]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

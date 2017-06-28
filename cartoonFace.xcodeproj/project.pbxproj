@@ -15,6 +15,7 @@
 		98AAEE151EFA41A800418487 /* cartoonFaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAEE141EFA41A800418487 /* cartoonFaceTests.swift */; };
 		98AAEE201EFA41A800418487 /* cartoonFaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAEE1F1EFA41A800418487 /* cartoonFaceUITests.swift */; };
 		98AAEE2F1EFA422200418487 /* RoundFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAEE2E1EFA422200418487 /* RoundFace.swift */; };
+		98E3CA9B1F03577700F3C5D9 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E3CA9A1F03577700F3C5D9 /* FacialExpression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		98AAEE1F1EFA41A800418487 /* cartoonFaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartoonFaceUITests.swift; sourceTree = "<group>"; };
 		98AAEE211EFA41A800418487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98AAEE2E1EFA422200418487 /* RoundFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundFace.swift; sourceTree = "<group>"; };
+		98E3CA9A1F03577700F3C5D9 /* FacialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				98AAEE2D1EFA41C400418487 /* Supporing files */,
 				98AAEE011EFA41A800418487 /* ViewController.swift */,
+				98E3CA9A1F03577700F3C5D9 /* FacialExpression.swift */,
 				98AAEE2E1EFA422200418487 /* RoundFace.swift */,
 				98AAEE031EFA41A800418487 /* Main.storyboard */,
 			);
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98AAEE021EFA41A800418487 /* ViewController.swift in Sources */,
+				98E3CA9B1F03577700F3C5D9 /* FacialExpression.swift in Sources */,
 				98AAEE2F1EFA422200418487 /* RoundFace.swift in Sources */,
 				98AAEE001EFA41A800418487 /* AppDelegate.swift in Sources */,
 			);
@@ -526,6 +530,7 @@
 				98AAEE261EFA41A800418487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		98AAEE271EFA41A800418487 /* Build configuration list for PBXNativeTarget "cartoonFaceTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +539,7 @@
 				98AAEE291EFA41A800418487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		98AAEE2A1EFA41A800418487 /* Build configuration list for PBXNativeTarget "cartoonFaceUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +548,7 @@
 				98AAEE2C1EFA41A800418487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

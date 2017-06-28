@@ -37,6 +37,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="faceColor">
                                         <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="eyesOpen" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -48,6 +49,9 @@
                             <constraint firstAttribute="trailing" secondItem="HpA-SA-dMM" secondAttribute="trailing" id="s8I-3e-Zl6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="faceView" destination="HpA-SA-dMM" id="kM3-GD-xVF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

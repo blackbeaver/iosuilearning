@@ -12,19 +12,39 @@ import UIKit
 @IBDesignable
 class RoundFace: UIView {
     @IBInspectable
-    var emotionFactor: Double = 1.0
+    var emotionFactor: Double = 0 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     @IBInspectable
-    var faceColor: UIColor = UIColor.blue
+    var faceColor: UIColor = UIColor.blue {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     @IBInspectable
-    var scaleFactor: CGFloat = 0.9
+    var scaleFactor: CGFloat = 0.9 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     @IBInspectable
-    var lineWidth: CGFloat = 5.0
+    var lineWidth: CGFloat = 5.0 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     @IBInspectable
-    var eyesOpen: Bool = true
+    var eyesOpen: Bool = true {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     enum sideOfEye {
         case left
@@ -48,7 +68,18 @@ class RoundFace: UIView {
     }
     
     private var faceRadius: CGFloat {
-        return CGFloat(min(self.bounds.maxX, self.bounds.maxY) / 2 * CGFloat(scaleFactor))
+        return CGFloat(min(self.bounds.maxX, self.bounds.maxY) / 2 * scaleFactor)
+    }
+    
+    
+    func pinch(recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .changed,.ended:
+            scaleFactor =  recognizer.scale * scaleFactor
+            recognizer.scale = 1
+        default:
+            break
+        }
     }
     
     private func faceBezierPath() -> UIBezierPath {
